@@ -53,7 +53,7 @@ LOCAL_SHARED_LIBRARIES += libcrypto
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE:= libssl
 LOCAL_EXPORT_C_INCLUDES := $(PARENT_PATH)/include
-include $(BUILD_SHARED_LIBRARY)
+include $(BUILD_STATIC_LIBRARY)
 
 ifeq ($(WITH_HOST_DALVIK),true)
     include $(CLEAR_VARS)
@@ -63,7 +63,7 @@ ifeq ($(WITH_HOST_DALVIK),true)
     LOCAL_SHARED_LIBRARIES += libcrypto
     LOCAL_MODULE_TAGS := optional
     LOCAL_MODULE:= libssl
-    include $(BUILD_SHARED_LIBRARY)
+    include $(BUILD_STATIC_LIBRARY)
 endif
 
 # ssltest
